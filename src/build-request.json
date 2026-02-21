@@ -1,0 +1,212 @@
+{
+  "kind": "build_request",
+  "title": "Build Dragon Games Store gaming marketplace website",
+  "projectName": "Dragon Games Store",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a homepage with white background and black text theme, displaying the DGS logo (white background circle with black 'DGS' text) in the header",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2",
+          "msg-4"
+        ],
+        "quotes": [
+          "keep the website theme white and fonts texts black",
+          "make the profile DGS in background white and text black just write DGS nothing else as pfp"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Logo displays 'DGS' in black text on white circular background",
+        "Entire website uses white background with black text as base theme",
+        "Header is fixed and visible across all pages"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Display Dragon Games Store description section on homepage including: main description about being a trusted digital gaming marketplace with 3+ years experience and 5,600+ customers, platform support badges for PC/PS5/PS4/Xbox, and trust indicators for competitive pricing, fast service, secure purchases, and responsive customer support",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Dragon Games Store is a trusted digital gaming marketplace committed to delivering high-quality games at competitive and affordable prices",
+          "With over 3 years of industry experience, we have proudly built a community of 5,600+ satisfied customers",
+          "We provide a wide collection of games across major platforms"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Description section displays full text about Dragon Games Store mission and experience",
+        "Platform badges show PC, PS5, PS4, and Xbox with appropriate icons or labels",
+        "Trust indicators clearly display 5,600+ customers, 3+ years experience, 24/7 support, competitive pricing, and secure service",
+        "Section uses white background with black text and maintains visual hierarchy"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create horizontal scrolling game catalog with left and right arrow navigation guides, where each game card displays: game image, 'SALE!' badge with blue background and white text positioned at top, game name, and price in top-right corner with blue background and white text in ₹249/- format (large and clearly visible)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2",
+          "msg-4"
+        ],
+        "quotes": [
+          "write sale! On top of the every game i add in blue & font white",
+          "keep the price in the top right corner of game in black and white themed ₹249/- only like this but keep it big and better visible",
+          "There must be arrows to guide customers where to slide to see the games",
+          "different games catalogue ofcourse like slide slide swipe by fingers but arrow will guide them where to swipe"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Game catalog scrolls horizontally with smooth swipe gestures",
+        "Left and right arrow buttons are visible and functional for navigation",
+        "Each game card shows 'SALE!' badge at top with blue background and white text",
+        "Price displays in top-right corner with blue background, white text, in ₹XXX/- format, and is prominently sized",
+        "Game cards display game image and name clearly",
+        "Arrows guide users where to swipe for more games"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add 'Buy Now' button with blue background and white text to each game card in the catalog, which when clicked redirects to WhatsApp chat at https://wa.me/918757242955 with pre-filled message 'Hey! I want to order 🛍️ a game from Dragon games store 🎮 price: [game price]'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2",
+          "msg-4"
+        ],
+        "quotes": [
+          "make a button of buy now in the website in blue and white themed the background blue and text white so whenever someone clicks on buy now he redirects to my WhatsApp chat",
+          "customer conversation should start with Hey! I want to order 🛍️ a game from Dragon games store 🎮 price:XX"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Buy Now button appears on each game card with blue background and white text",
+        "Clicking Buy Now opens WhatsApp chat link https://wa.me/918757242955",
+        "WhatsApp message is pre-filled with exact text: 'Hey! I want to order 🛍️ a game from Dragon games store 🎮 price: [actual game price]'",
+        "Price placeholder is replaced with the specific game's price"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement game detail view that opens when clicking on a game card, displaying: trailer video at the top (embedded from URL), game description below the video, and a 'Buy Now' button below the description that redirects to WhatsApp with the same pre-filled message format",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "when someone's click on game a trailer video will be there and below the video there will be description of the game and just below the description there will be one more buy now that redirects directly to my WhatsApp chat"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking a game card opens a detail view (modal or separate page)",
+        "Trailer video from URL is embedded and playable at top of detail view",
+        "Game description text displays below the video",
+        "Buy Now button appears below description with blue background and white text",
+        "Buy Now button redirects to WhatsApp with pre-filled message including game price",
+        "Detail view can be closed to return to catalog"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create backend data model for games storing: game name, image reference, trailer video URL, description text, and price in rupees",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2",
+          "msg-4"
+        ],
+        "quotes": [
+          "add catalogue for my games so I can add new games in it too with image and name and maybe a trailler video too, and leave some space to write the game description too"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend stores game records with fields: name, image, trailerUrl, description, and price",
+        "Price is stored as a numeric value representing rupees",
+        "Games can be retrieved for display in catalog",
+        "Game data persists across canister upgrades"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create admin panel accessible via Internet Identity authentication that allows adding new games with: direct file upload button for game image, text input for game name, URL input field for trailer video link (copy-paste enabled), text area for game description, and numeric input for price",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2",
+          "msg-4"
+        ],
+        "quotes": [
+          "there must be admin panel to change anything we want there must be url link for the video that direct works by copy paste and for image addition on cataloge there should be direct file button",
+          "admin panel should be accessed by me by multiple phones so no issue"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin panel is protected by Internet Identity authentication",
+        "Admin can be accessed from multiple devices using same identity",
+        "Form includes file upload button for game images",
+        "Form includes text input for game name",
+        "Form includes URL input field for trailer video links with copy-paste support",
+        "Form includes textarea for game description",
+        "Form includes numeric input for price",
+        "Admin can submit form to add new game to catalog",
+        "Added games immediately appear in the public catalog"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement backend functions to create new games with uploaded image storage, and retrieve all games for catalog display",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2",
+          "msg-4"
+        ],
+        "quotes": [
+          "add catalogue for my games so I can add new games in it too with image and name and maybe a trailler video too"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend provides function to create new game with all required fields",
+        "Uploaded game images are stored and accessible",
+        "Backend provides function to retrieve all games for catalog display",
+        "Image uploads are handled efficiently and stored properly"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use white background with black text as base theme throughout the website",
+    "Blue background with white text must be used for 'SALE!' badges, price tags, and 'Buy Now' buttons",
+    "WhatsApp redirect link must be exactly https://wa.me/918757242955",
+    "Pre-filled WhatsApp message format must be exactly: 'Hey! I want to order 🛍️ a game from Dragon games store 🎮 price: [game price]'",
+    "DGS logo must display only the text 'DGS' in black on white circular background",
+    "Price format must be ₹XXX/- with rupee symbol and dash",
+    "Admin panel must use Internet Identity for authentication to support multiple device access"
+  ],
+  "nonGoals": [
+    "Payment processing or checkout system beyond WhatsApp redirect",
+    "User registration or customer accounts",
+    "Shopping cart functionality",
+    "Order tracking or order management system",
+    "Email notifications",
+    "Social media integration beyond WhatsApp",
+    "Game reviews or ratings system",
+    "Search or filtering functionality for games",
+    "Multi-language support"
+  ],
+  "imageRequirements": {
+    "required": [
+      "DGS logo design with black 'DGS' text on white circular background, clean and professional (dgs-logo.dim_200x200.png)",
+      "PC platform icon in a modern gaming style (pc-icon.dim_64x64.png)",
+      "PlayStation 5 platform icon in a modern gaming style (ps5-icon.dim_64x64.png)",
+      "PlayStation 4 platform icon in a modern gaming style (ps4-icon.dim_64x64.png)",
+      "Xbox platform icon in a modern gaming style (xbox-icon.dim_64x64.png)"
+    ],
+    "edits": []
+  }
+}

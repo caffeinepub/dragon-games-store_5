@@ -1,0 +1,140 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-homepage-with-white-background-and-black-text-theme-displaying-the-dgs-logo-white-background-circle-with-black-dgs-text-in-the-header",
+      "featureTitle": "Create a homepage with white background and black text theme, displaying the DGS logo (white background circle with black 'DGS' text) in the header",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-dragon-games-store-description-section-on-homepage-including-main-description-about-being-a-trusted-digital-gaming-marketplace-with-3-years-experience-and-5-600-customers-platform-support-badges-for-pc-ps5-ps4-xbox-and-trust-indicators-for-competitive-pricing-fast-service-secure-purchases-and-responsive-customer-support",
+      "featureTitle": "Display Dragon Games Store description section on homepage including: main description about being a trusted digital gaming marketplace with 3+ years experience and 5,600+ customers, platform support badges for PC/PS5/PS4/Xbox, and trust indicators for competitive pricing, fast service, secure purchases, and responsive customer support",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/StoreDescription.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-horizontal-scrolling-game-catalog-with-left-and-right-arrow-navigation-guides-where-each-game-card-displays-game-image-sale-badge-with-blue-background-and-white-text-positioned-at-top-game-name-and-price-in-top-right-corner-with-blue-background-and-white-text-in-249-format-large-and-clearly-visible",
+      "featureTitle": "Create horizontal scrolling game catalog with left and right arrow navigation guides, where each game card displays: game image, 'SALE!' badge with blue background and white text positioned at top, game name, and price in top-right corner with blue background and white text in ₹249/- format (large and clearly visible)",
+      "files": [
+        "frontend/src/components/GameCard.tsx",
+        "frontend/src/components/GameCatalog.tsx",
+        "frontend/src/hooks/useGames.ts",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-buy-now-button-with-blue-background-and-white-text-to-each-game-card-in-the-catalog-which-when-clicked-redirects-to-whatsapp-chat-at-https-wa-me-918757242955-with-pre-filled-message-hey-i-want-to-order-a-game-from-dragon-games-store-price-game-price",
+      "featureTitle": "Add 'Buy Now' button with blue background and white text to each game card in the catalog, which when clicked redirects to WhatsApp chat at https://wa.me/918757242955 with pre-filled message 'Hey! I want to order 🛍️ a game from Dragon games store 🎮 price: [game price]'",
+      "files": [
+        "frontend/src/components/GameCard.tsx",
+        "frontend/src/utils/whatsapp.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-game-detail-view-that-opens-when-clicking-on-a-game-card-displaying-trailer-video-at-the-top-embedded-from-url-game-description-below-the-video-and-a-buy-now-button-below-the-description-that-redirects-to-whatsapp-with-the-same-pre-filled-message-format",
+      "featureTitle": "Implement game detail view that opens when clicking on a game card, displaying: trailer video at the top (embedded from URL), game description below the video, and a 'Buy Now' button below the description that redirects to WhatsApp with the same pre-filled message format",
+      "files": [
+        "frontend/src/components/GameCard.tsx",
+        "frontend/src/components/GameDetailModal.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-admin-panel-accessible-via-internet-identity-authentication-that-allows-adding-new-games-with-direct-file-upload-button-for-game-image-text-input-for-game-name-url-input-field-for-trailer-video-link-copy-paste-enabled-text-area-for-game-description-and-numeric-input-for-price",
+      "featureTitle": "Create admin panel accessible via Internet Identity authentication that allows adding new games with: direct file upload button for game image, text input for game name, URL input field for trailer video link (copy-paste enabled), text area for game description, and numeric input for price",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/AddGameForm.tsx",
+        "frontend/src/components/Header.tsx",
+        "frontend/src/components/LoginButton.tsx",
+        "frontend/src/components/ProfileSetupModal.tsx",
+        "frontend/src/hooks/useAddGame.ts",
+        "frontend/src/pages/AdminPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

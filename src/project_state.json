@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Gaming store horizontal website for Dragon Games Store (Instagram store) with 3+ years experience, 24/7 support, 5.6k customer base. Features: horizontal scrolling game catalog with navigation arrows, game cards with images/names/trailers/descriptions/prices, admin panel for game management (image upload, video URL, pricing), WhatsApp buy button integration, DGS profile logo, white/black theme with blue accents.",
+  "architectural_notes": [
+    "WhatsApp integration URL: https://wa.me/918757242955 with dynamic pre-filled message including game price",
+    "Multi-device admin access via Internet Identity authentication",
+    "Game catalog supports horizontal swipe navigation with visual arrow guides",
+    "Color scheme: white backgrounds, black text, blue accents for CTAs and pricing"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- DGS logo design with black 'DGS' text on white circular background, clean and professional (dgs-logo.dim_200x200.png)\n- PC platform icon in a modern gaming style (pc-icon.dim_64x64.png)\n- PlayStation 5 platform icon in a modern gaming style (ps5-icon.dim_64x64.png)\n- PlayStation 4 platform icon in a modern gaming style (ps4-icon.dim_64x64.png)\n- Xbox platform icon in a modern gaming style (xbox-icon.dim_64x64.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-homepage-with-white-background-and-black-text-theme-displaying-the-dgs-logo-white-background-circle-with-black-dgs-text-in-the-header",
+      "title": "Create a homepage with white background and black text theme, displaying the DGS logo (white background circle with black 'DGS' text) in the header",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-dragon-games-store-description-section-on-homepage-including-main-description-about-being-a-trusted-digital-gaming-marketplace-with-3-years-experience-and-5-600-customers-platform-support-badges-for-pc-ps5-ps4-xbox-and-trust-indicators-for-competitive-pricing-fast-service-secure-purchases-and-responsive-customer-support",
+      "title": "Display Dragon Games Store description section on homepage including: main description about being a trusted digital gaming marketplace with 3+ years experience and 5,600+ customers, platform support badges for PC/PS5/PS4/Xbox, and trust indicators for competitive pricing, fast service, secure purchases, and responsive customer support",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-horizontal-scrolling-game-catalog-with-left-and-right-arrow-navigation-guides-where-each-game-card-displays-game-image-sale-badge-with-blue-background-and-white-text-positioned-at-top-game-name-and-price-in-top-right-corner-with-blue-background-and-white-text-in-249-format-large-and-clearly-visible",
+      "title": "Create horizontal scrolling game catalog with left and right arrow navigation guides, where each game card displays: game image, 'SALE!' badge with blue background and white text positioned at top, game name, and price in top-right corner with blue background and white text in ₹249/- format (large and clearly visible)",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-buy-now-button-with-blue-background-and-white-text-to-each-game-card-in-the-catalog-which-when-clicked-redirects-to-whatsapp-chat-at-https-wa-me-918757242955-with-pre-filled-message-hey-i-want-to-order-a-game-from-dragon-games-store-price-game-price",
+      "title": "Add 'Buy Now' button with blue background and white text to each game card in the catalog, which when clicked redirects to WhatsApp chat at https://wa.me/918757242955 with pre-filled message 'Hey! I want to order 🛍️ a game from Dragon games store 🎮 price: [game price]'",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-game-detail-view-that-opens-when-clicking-on-a-game-card-displaying-trailer-video-at-the-top-embedded-from-url-game-description-below-the-video-and-a-buy-now-button-below-the-description-that-redirects-to-whatsapp-with-the-same-pre-filled-message-format",
+      "title": "Implement game detail view that opens when clicking on a game card, displaying: trailer video at the top (embedded from URL), game description below the video, and a 'Buy Now' button below the description that redirects to WhatsApp with the same pre-filled message format",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-admin-panel-accessible-via-internet-identity-authentication-that-allows-adding-new-games-with-direct-file-upload-button-for-game-image-text-input-for-game-name-url-input-field-for-trailer-video-link-copy-paste-enabled-text-area-for-game-description-and-numeric-input-for-price",
+      "title": "Create admin panel accessible via Internet Identity authentication that allows adding new games with: direct file upload button for game image, text input for game name, URL input field for trailer video link (copy-paste enabled), text area for game description, and numeric input for price",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Horizontal scrolling game catalog with arrow navigation guides",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Game cards displaying image, 'SALE!' badge (blue/white), price top-right (blue/white, ₹249/- format), Buy Now button (blue/white)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Admin panel with Internet Identity authentication for multi-device access",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Admin game management: add games with image upload, name, trailer video URL, description, and price",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Game detail view: trailer video at top, description below, Buy Now button with WhatsApp redirect and pre-filled message 'Hey! I want to order 🛍️ a game from Dragon games store 🎮 price: [price]'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "DGS profile logo (white background, black 'DGS' text)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "White background theme with black text and blue accents throughout website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Dragon Games Store description section with trust badges (3+ years, 5.6k customers, 24/7 support, platform availability)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Create backend data model for games storing: game name, image reference, trailer video URL, description text, and price in rupees",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Implement backend functions to create new games with uploaded image storage, and retrieve all games for catalog display",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Dragon Games Store",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,19 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining routes for home and admin pages with a shared layout including header, footer, and profile setup modal.",
+  "frontend/src/pages/HomePage.tsx": "Homepage component that renders the store description and game catalog sections.",
+  "frontend/src/pages/AdminPage.tsx": "Admin panel page with authentication guard, displaying login prompt for unauthenticated users, access denied for non-admins, and game management form for authorized admins.",
+  "frontend/src/components/Header.tsx": "Fixed header component displaying DGS logo, store name, and admin panel link (visible only to admins).",
+  "frontend/src/components/Footer.tsx": "Footer component with copyright notice and caffeine.ai attribution link with UTM tracking.",
+  "frontend/src/components/StoreDescription.tsx": "Store description section displaying Dragon Games Store mission, platform badges, trust indicators, and customer statistics.",
+  "frontend/src/components/GameCatalog.tsx": "Horizontal scrolling game catalog with left/right arrow navigation buttons and responsive scroll indicators.",
+  "frontend/src/components/GameCard.tsx": "Game card component displaying game image, SALE badge, price, name, and Buy Now button with click handler to open detail modal.",
+  "frontend/src/components/GameDetailModal.tsx": "Modal displaying game trailer video, description, price, and Buy Now button that redirects to WhatsApp with pre-filled message.",
+  "frontend/src/components/LoginButton.tsx": "Login/logout button component using Internet Identity with query cache clearing on logout.",
+  "frontend/src/components/AddGameForm.tsx": "Admin form for adding new games with image upload, name, trailer URL, description, and price inputs with upload progress tracking.",
+  "frontend/src/components/ProfileSetupModal.tsx": "Modal prompting authenticated users without a profile to enter their name, preventing flash by checking actor availability.",
+  "frontend/src/hooks/useGames.ts": "React Query hook to fetch all games from the backend.",
+  "frontend/src/hooks/useAddGame.ts": "React Query mutation hook to add new games with automatic cache invalidation.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for user profile operations including fetching and saving caller user profile with proper loading state handling.",
+  "frontend/src/utils/whatsapp.ts": "Utility function to generate WhatsApp URL with phone number and pre-filled message including game price.",
+  "frontend/src/index.css": "Global styles with white background and black text theme, including scrollbar hiding utilities."
+}

@@ -1,0 +1,58 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T22:15:52.602Z",
+  "summary": "The implementation closely matches the BuildRequest with all core requirements implemented. However, there are a few missing constraints and one potential hallucinated feature (profile setup modal).",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "DGS logo must display only the text 'DGS' in black on white circular background",
+      "reason": "The Header component loads the logo from an image file (/assets/generated/dgs-logo.dim_200x200.png) instead of rendering text 'DGS' directly. The constraint specifies the logo should be text-based ('DGS' text in black on white circular background), not an image.",
+      "evidence": [
+        "frontend/src/components/Header.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Profile setup modal and user profile management system",
+      "reason": "The implementation includes ProfileSetupModal component and user profile CRUD operations (getCallerUserProfile, saveCallerUserProfile, getUserProfile) in the backend. These features are not mentioned in any requirement. The BuildRequest explicitly lists 'User registration or customer accounts' under Non-goals.",
+      "evidence": [
+        "frontend/src/components/ProfileSetupModal.tsx",
+        "frontend/src/hooks/useQueries.ts",
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.85,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/AddGameForm.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/GameCard.tsx",
+    "frontend/src/components/GameCatalog.tsx",
+    "frontend/src/components/GameDetailModal.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/LoginButton.tsx",
+    "frontend/src/components/ProfileSetupModal.tsx",
+    "frontend/src/components/StoreDescription.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useAddGame.ts",
+    "frontend/src/hooks/useGames.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AdminPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/src/utils/whatsapp.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Dragon Games Store Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create homepage with white background, black text theme, and DGS logo in header",
+      "acceptanceCriteria": [
+        "Logo displays 'DGS' in black text on white circular background",
+        "Entire website uses white background with black text as base theme",
+        "Header is fixed and visible across all pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Set global theme with white background and black text as base colors throughout the application"
+        },
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "create",
+          "description": "Create fixed header component displaying the DGS logo (using generated image frontend/public/assets/generated/dgs-logo.dim_200x200.png) with white circular background and black 'DGS' text, ensuring it remains visible across all pages"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Header component into the main App layout so it appears on all pages"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Display Dragon Games Store description section with platform badges and trust indicators on homepage",
+      "acceptanceCriteria": [
+        "Description section displays full text about Dragon Games Store mission and experience",
+        "Platform badges show PC, PS5, PS4, and Xbox with appropriate icons or labels",
+        "Trust indicators clearly display 5,600+ customers, 3+ years experience, 24/7 support, competitive pricing, and secure service",
+        "Section uses white background with black text and maintains visual hierarchy"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/StoreDescription.tsx",
+          "operation": "create",
+          "description": "Create component displaying Dragon Games Store description text about being a trusted marketplace with 3+ years experience and 5,600+ customers, platform support badges using generated icons (frontend/public/assets/generated/pc-icon.dim_64x64.png, frontend/public/assets/generated/ps5-icon.dim_64x64.png, frontend/public/assets/generated/ps4-icon.dim_64x64.png, frontend/public/assets/generated/xbox-icon.dim_64x64.png), and trust indicators for competitive pricing, fast service, secure purchases, and 24/7 customer support, maintaining white background with black text"
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create homepage that renders the StoreDescription component below the header"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for HomePage at root path and wire it into the application router"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create horizontal scrolling game catalog with navigation arrows, game cards showing image, SALE badge, name, and price",
+      "acceptanceCriteria": [
+        "Game catalog scrolls horizontally with smooth swipe gestures",
+        "Left and right arrow buttons are visible and functional for navigation",
+        "Each game card shows 'SALE!' badge at top with blue background and white text",
+        "Price displays in top-right corner with blue background, white text, in ₹XXX/- format, and is prominently sized",
+        "Game cards display game image and name clearly",
+        "Arrows guide users where to swipe for more games"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useGames.ts",
+          "operation": "create",
+          "description": "Create React Query hook to fetch games from backend using getGames() method, returning array of Game objects with name, image, trailerUrl, description, and price fields"
+        },
+        {
+          "path": "frontend/src/components/GameCard.tsx",
+          "operation": "create",
+          "description": "Create game card component displaying game image using ExternalBlob.getDirectURL(), SALE badge with blue background and white text positioned at top, game name, and price in top-right corner with blue background, white text in ₹XXX/- format with large prominent sizing"
+        },
+        {
+          "path": "frontend/src/components/GameCatalog.tsx",
+          "operation": "create",
+          "description": "Create horizontal scrolling catalog component with left/right arrow navigation buttons, rendering GameCard components for each game fetched via useGames hook, supporting smooth swipe gestures and arrow-guided navigation"
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add GameCatalog component to HomePage below the StoreDescription section"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add Buy Now button to game cards that redirects to WhatsApp with pre-filled message",
+      "acceptanceCriteria": [
+        "Buy Now button appears on each game card with blue background and white text",
+        "Clicking Buy Now opens WhatsApp chat link https://wa.me/918757242955",
+        "WhatsApp message is pre-filled with exact text: 'Hey! I want to order 🛍️ a game from Dragon games store 🎮 price: [actual game price]'",
+        "Price placeholder is replaced with the specific game's price"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/utils/whatsapp.ts",
+          "operation": "create",
+          "description": "Create utility function to generate WhatsApp URL with phone number 918757242955 and pre-filled message format 'Hey! I want to order 🛍️ a game from Dragon games store 🎮 price: ₹XXX/-', accepting game price as parameter"
+        },
+        {
+          "path": "frontend/src/components/GameCard.tsx",
+          "operation": "modify",
+          "description": "Add Buy Now button with blue background and white text that opens WhatsApp link using the whatsapp utility function with the game's price"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement game detail view with trailer video, description, and Buy Now button",
+      "acceptanceCriteria": [
+        "Clicking a game card opens a detail view (modal or separate page)",
+        "Trailer video from URL is embedded and playable at top of detail view",
+        "Game description text displays below the video",
+        "Buy Now button appears below description with blue background and white text",
+        "Buy Now button redirects to WhatsApp with pre-filled message including game price",
+        "Detail view can be closed to return to catalog"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/GameDetailModal.tsx",
+          "operation": "create",
+          "description": "Create modal component displaying embedded trailer video at top using game's trailerUrl, game description below video, and Buy Now button below description with blue background and white text that redirects to WhatsApp, with close functionality to return to catalog"
+        },
+        {
+          "path": "frontend/src/components/GameCard.tsx",
+          "operation": "modify",
+          "description": "Add click handler to game card that opens GameDetailModal with the selected game's data"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create admin panel with Internet Identity authentication for adding games with image upload, name, trailer URL, description, and price inputs",
+      "acceptanceCriteria": [
+        "Admin panel is protected by Internet Identity authentication",
+        "Admin can be accessed from multiple devices using same identity",
+        "Form includes file upload button for game images",
+        "Form includes text input for game name",
+        "Form includes URL input field for trailer video links with copy-paste support",
+        "Form includes textarea for game description",
+        "Form includes numeric input for price",
+        "Admin can submit form to add new game to catalog",
+        "Added games immediately appear in the public catalog"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LoginButton.tsx",
+          "operation": "create",
+          "description": "Use the authorization component to create login/logout button using useInternetIdentity hook, clearing query cache on logout. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/hooks/useAddGame.ts",
+          "operation": "create",
+          "description": "Create React Query mutation hook to add games using backend addGame() method, accepting name, image as ExternalBlob (using blob-storage component), trailerUrl, description, and price parameters, invalidating games query cache on success. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/AddGameForm.tsx",
+          "operation": "create",
+          "description": "Create form component with file upload for game image (using ExternalBlob.fromBytes from blob-storage component with upload progress tracking), text input for name, URL input for trailer video with copy-paste support, textarea for description, and numeric input for price, submitting via useAddGame hook. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/AdminPage.tsx",
+          "operation": "create",
+          "description": "Create admin page rendering LoginButton and AddGameForm, checking authentication state and admin role using useInternetIdentity and backend isCallerAdmin() method. Use the authorization component to protect this page with authentication guard. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Add navigation link to admin panel in header, visible only when user is authenticated and has admin role"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for AdminPage at /admin path and wire it into the application router"
+        },
+        {
+          "path": "frontend/src/components/ProfileSetupModal.tsx",
+          "operation": "create",
+          "description": "Use the authorization component to create modal that prompts authenticated users without a profile to enter their name, using getCallerUserProfile() to check profile existence and saveCallerUserProfile() to save. Prevent modal flash by checking actor availability and fetch status. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire ProfileSetupModal into App to display when authenticated user lacks a profile, ensuring it appears before showing admin panel"
+        }
+      ]
+    }
+  ]
+}

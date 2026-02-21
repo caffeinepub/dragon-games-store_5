@@ -1,0 +1,250 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-21T22:15:52.605Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 8,
+    "implemented": 6,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Create a homepage with white background and black text theme, displaying the DGS logo (white background circle with black 'DGS' text) in the header",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/components/Header.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/components/Header.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Display Dragon Games Store description section on homepage including: main description about being a trusted digital gaming marketplace with 3+ years experience and 5,600+ customers, platform support badges for PC/PS5/PS4/Xbox, and trust indicators for competitive pricing, fast service, secure purchases, and responsive customer support",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/StoreDescription.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/StoreDescription.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Create horizontal scrolling game catalog with left and right arrow navigation guides, where each game card displays: game image, 'SALE!' badge with blue background and white text positioned at top, game name, and price in top-right corner with blue background and white text in ₹249/- format (large and clearly visible)",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useGames.ts",
+          "frontend/src/components/GameCard.tsx",
+          "frontend/src/components/GameCatalog.tsx",
+          "frontend/src/pages/HomePage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useGames.ts",
+          "frontend/src/components/GameCard.tsx",
+          "frontend/src/components/GameCatalog.tsx",
+          "frontend/src/pages/HomePage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Add 'Buy Now' button with blue background and white text to each game card in the catalog, which when clicked redirects to WhatsApp chat at https://wa.me/918757242955 with pre-filled message 'Hey! I want to order 🛍️ a game from Dragon games store 🎮 price: [game price]'",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/utils/whatsapp.ts",
+          "frontend/src/components/GameCard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/utils/whatsapp.ts",
+          "frontend/src/components/GameCard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Implement game detail view that opens when clicking on a game card, displaying: trailer video at the top (embedded from URL), game description below the video, and a 'Buy Now' button below the description that redirects to WhatsApp with the same pre-filled message format",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/GameDetailModal.tsx",
+          "frontend/src/components/GameCard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/GameDetailModal.tsx",
+          "frontend/src/components/GameCard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Create backend data model for games storing: game name, image reference, trailer video URL, description text, and price in rupees",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Create admin panel accessible via Internet Identity authentication that allows adding new games with: direct file upload button for game image, text input for game name, URL input field for trailer video link (copy-paste enabled), text area for game description, and numeric input for price",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/LoginButton.tsx",
+          "frontend/src/hooks/useAddGame.ts",
+          "frontend/src/components/AddGameForm.tsx",
+          "frontend/src/pages/AdminPage.tsx",
+          "frontend/src/components/Header.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/components/ProfileSetupModal.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/LoginButton.tsx",
+          "frontend/src/hooks/useAddGame.ts",
+          "frontend/src/components/AddGameForm.tsx",
+          "frontend/src/pages/AdminPage.tsx",
+          "frontend/src/components/Header.tsx",
+          "frontend/src/App.tsx",
+          "frontend/src/components/ProfileSetupModal.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Implement backend functions to create new games with uploaded image storage, and retrieve all games for catalog display",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/authorization/MixinAuthorization.mo",
+    "backend/authorization/access-control.mo",
+    "backend/blob-storage/Mixin.mo",
+    "backend/blob-storage/Storage.mo",
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/dgs-logo.dim_200x200.png",
+    "frontend/public/assets/generated/pc-icon.dim_64x64.png",
+    "frontend/public/assets/generated/ps4-icon.dim_64x64.png",
+    "frontend/public/assets/generated/ps5-icon.dim_64x64.png",
+    "frontend/public/assets/generated/xbox-icon.dim_64x64.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/AddGameForm.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/GameCard.tsx",
+    "frontend/src/components/GameCatalog.tsx",
+    "frontend/src/components/GameDetailModal.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/LoginButton.tsx",
+    "frontend/src/components/ProfileSetupModal.tsx",
+    "frontend/src/components/StoreDescription.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useAddGame.ts",
+    "frontend/src/hooks/useGames.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AdminPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/src/utils/whatsapp.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
